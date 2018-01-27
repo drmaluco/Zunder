@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/-192150926/MerlinMinerUser.iml" filepath="$PROJECT_DIR$/.idea/modules/-192150926/MerlinMinerUser.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app.iml" filepath="$PROJECT_DIR$/.idea/modules/app.iml" group="app" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/2069702847/mysql-connector-java-3.0.17-ga-bin.iml" filepath="$PROJECT_DIR$/.idea/modules/2069702847/mysql-connector-java-3.0.17-ga-bin.iml" group="mysql-connector-java-3.0.17-ga-bin" />
+    </modules>
+  </component>
+</project>

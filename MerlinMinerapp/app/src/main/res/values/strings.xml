@@ -1,0 +1,33 @@
+<resources>
+    <string name="app_name">Merlin Control</string>
+    <string name="user_2">User 2</string>
+    <string name="user_3">User 3</string>
+    <string name="user_1">User 1</string>
+    <string name="amount">5</string>
+    <string name="users">Usuarios Online</string>
+    <string name="user_4">User 4</string>
+    <string name="user_5">User 5</string>
+    <string name="sendMsg">Enviar mensaje a </string>
+    <string name="info">Información</string>
+    <string name="GPU">GPU:</string>
+    <string name="timemining">Tiempo Minado:</string>
+    <string name="dinero">Dinero Acumulado:</string>
+    <string name="mail">Email:</string>
+    <string name="language">Lenguaje:</string>
+    <string name="usuario">Usuario:</string>
+    <string name="pass">Contraseña:</string>
+    <string name="speed">Velocidad:</string>
+    <string name="offline">Usuarios Offline</string>
+    <string name="diff">Ajustar Dificultad</string>
+    <string name="forceUpdate">Forzar Actualización</string>
+    <string name="event">Escribir evento</string>
+    <string name="eventAvailable">Añadir evento nuevo</string>
+    <string name="cantidad">Cantidad:</string>
+    <string name="address">Dirección:</string>
+    <string name="paymentType">Tipo de Pago:</string>
+    <string name="stats">Estadísticas</string>
+    <string name="title_activity_main3">Main3Activity</string>
+
+
+</resources>
+
