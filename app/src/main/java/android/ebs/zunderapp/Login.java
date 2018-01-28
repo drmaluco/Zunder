@@ -1,5 +1,6 @@
 package android.ebs.zunderapp;
 
+import android.content.Intent;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -33,12 +34,12 @@ public class Login extends AppCompatActivity implements View.OnClickListener {
         progressBar = (ProgressBar) findViewById(R.id.progressBar2);
 
         mAuth = FirebaseAuth.getInstance();
-
+        login = (Button) findViewById(R.id.login);
         signup = (Button) findViewById(R.id.signup);
 
 
         mAuth = FirebaseAuth.getInstance();
-
+        login.setOnClickListener(this);
         signup.setOnClickListener(this);
     }
 
@@ -48,7 +49,6 @@ public class Login extends AppCompatActivity implements View.OnClickListener {
      * that the user must complete such as 6 char length is
      * the minimum for password
      */
-
     private void registerUser() {
         String email = editTextEmail.getText().toString().trim();
         String password = editTextPassword.getText().toString().trim();
@@ -102,6 +102,52 @@ public class Login extends AppCompatActivity implements View.OnClickListener {
 
     }
 
+    private void loginUser(){
+        String email = editTextEmail.getText().toString().trim();
+        String password = editTextPassword.getText().toString().trim();
+
+        if (email.isEmpty()) {
+            editTextEmail.setError("Email is required");
+            editTextEmail.requestFocus();
+            return;
+        }
+
+        if (!Patterns.EMAIL_ADDRESS.matcher(email).matches()) {
+            editTextEmail.setError("Please enter a valid email");
+            editTextEmail.requestFocus();
+            return;
+        }
+
+        if (password.isEmpty()) {
+            editTextPassword.setError("Password is required");
+            editTextPassword.requestFocus();
+            return;
+        }
+
+        if (password.length() < 6) {
+            editTextPassword.setError("Minimum lenght of password should be 6");
+            editTextPassword.requestFocus();
+            return;
+        }
+
+        progressBar.setVisibility(View.VISIBLE);
+
+        mAuth.signInWithEmailAndPassword(email,password).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
+            @Override
+            public void onComplete(@NonNull Task<AuthResult> task) {
+                if (task.isSuccessful()){
+                    progressBar.setVisibility(View.GONE);
+                    Intent intent = new Intent(Login.this, MainActivity.class);
+                    intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                    startActivity(intent);
+                }else {
+                    progressBar.setVisibility(View.GONE);
+                    Toast.makeText(getApplicationContext(), task.getException().getMessage(), Toast.LENGTH_LONG).show();
+                }
+            }
+        });
+    }
+
     @Override
     public void onClick(View view) {
         switch (view.getId()) {
@@ -110,6 +156,7 @@ public class Login extends AppCompatActivity implements View.OnClickListener {
                 break;
 
             case R.id.login:
+                loginUser();
                 finish();
                 break;
         }
