@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "455195363016",
+    "firebase_url": "https://zunder-83d61.firebaseio.com",
+    "project_id": "zunder-83d61",
+    "storage_bucket": "zunder-83d61.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:455195363016:android:6d1ab852551b7104",
+        "android_client_info": {
+          "package_name": "android.ebs.zunderapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "455195363016-d3tf35gnuecsnbutccifvnn3cqa7hm6c.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "android.ebs.zunderapp",
+            "certificate_hash": "7339d712b374341f2572315fe288f5f157497979"
+          }
+        },
+        {
+          "client_id": "455195363016-hes2ur1f0jaknaa73c55u325jo4hbct6.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDufkE2fk7qZR8QS403TwmCJZGiXF039ro"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "455195363016-hes2ur1f0jaknaa73c55u325jo4hbct6.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
