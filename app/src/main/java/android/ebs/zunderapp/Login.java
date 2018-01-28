@@ -24,16 +24,24 @@ public class Login extends AppCompatActivity implements View.OnClickListener {
     Button signup, login;
     private FirebaseAuth mAuth;
 
-
+    /**
+     * Main method. Create variables and
+     * call functions when the screen is created.
+     * @param savedInstanceState
+     */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
+        //link elements in the XML layout to the Java class
         editTextEmail = (EditText) findViewById(R.id.email);
         editTextPassword = (EditText) findViewById(R.id.pass);
         progressBar = (ProgressBar) findViewById(R.id.progressBar2);
 
+        //instantiate authentification with FIrebase
         mAuth = FirebaseAuth.getInstance();
+
+        //Set button listener
         login = (Button) findViewById(R.id.login);
         signup = (Button) findViewById(R.id.signup);
 
@@ -102,6 +110,13 @@ public class Login extends AppCompatActivity implements View.OnClickListener {
 
     }
 
+    /**
+     * Method to sign in an existing user.
+     * There are some conditions in the form where
+     * the user types its email or password. Such
+     * as when the user types the email the char
+     * @ must be typed
+     */
     private void loginUser(){
         String email = editTextEmail.getText().toString().trim();
         String password = editTextPassword.getText().toString().trim();
@@ -148,6 +163,12 @@ public class Login extends AppCompatActivity implements View.OnClickListener {
         });
     }
 
+    /**
+     * Method to execute events when tapping
+     * certain buttons. In this case there are
+     * 2 buttons. Sign in + Sign up
+     * @param view
+     */
     @Override
     public void onClick(View view) {
         switch (view.getId()) {
