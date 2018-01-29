@@ -27,7 +27,11 @@ dependencies {
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'com.android.support.test:runner:1.0.1'
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.1'
+
+    //Rounded image view -- https://github.com/vinc3m1/RoundedImageView
+    compile 'com.makeramen:roundedimageview:2.3.0'
 }
+
 
 
 
